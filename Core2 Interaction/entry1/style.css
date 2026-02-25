@@ -1,0 +1,275 @@
+:root{
+  --bg: #f7f6f2;
+  --paper: #f4f4f4;
+  --ink: #323232;
+  --ghost: #d9d9d9;
+
+  --pad: clamp(28px, 4vw, 72px);
+  
+}
+.panel{
+  position: sticky;
+  top: 0;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold",
+               "Helvetica Neue", Arial, sans-serif;
+}
+
+.main{
+  width: 100%;
+  margin: 0;
+  background: var(--paper);
+}
+
+
+.panel{
+  height: 100vh;
+  padding: var(--pad);
+  overflow: hidden;
+}
+
+
+.top{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.first{
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(24px, 4vw, 64px);
+}
+
+.left{
+  width: 48vw;             
+}
+
+
+.the{
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--ghost);
+
+  font-size: 20vw;
+  line-height: 0.75;
+  letter-spacing: -0.04em;
+
+  transform-origin: left top;
+  transform: scaleX(1.9) scaleY(1.5);
+margin-top: -0.2vw; 
+  transition: color .2s ease;
+  cursor: pointer;
+}
+
+
+.circular{
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--ghost);
+
+  font-size: 16vw;
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+
+  transform-origin: top left;
+  transform: translateY(17vh) scaleX(0.9) scaleY(1.68); 
+  
+
+  transition: color .2s ease;
+  cursor: pointer;
+}
+
+
+.ruins{
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--ghost);
+
+  font-size: 18vw;
+  line-height: 0.75;
+  letter-spacing: -0.04em;
+
+  transform-origin: left top;
+  transform: scaleY(3.2);
+
+  transition: color .2s ease;
+  cursor: pointer;
+  margin-top: 0.3vw;
+}
+
+
+.the:hover,
+.circular:hover,
+.ruins:hover{
+  color: var(--ink);
+}
+
+
+.panel:not(.top){
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.title{
+  margin: 0;
+  color: var(--ghost);
+  font-weight: 900;
+  text-transform: uppercase;
+
+  line-height: 0.78;
+  letter-spacing: -0.04em;
+}
+
+.row{
+  display: block;
+  font-size: 18vw;
+  transition: color .2s ease;
+  cursor: pointer;
+}
+
+.row:hover{
+  color: var(--ink);
+}
+
+
+@media (max-width: 520px){
+  .the{ font-size: 22vw; transform: scaleX(1.15); }
+  .circular{ font-size: 18vw; transform: scaleX(1.05); }
+  .ruins{ font-size: 20vw; transform: scaleY(1.2); }
+  .row{ font-size: 20vw; }
+}
+
+ 
+.title-wrap{
+  height:100vh;
+  padding:2vw;
+  overflow:hidden;
+}
+
+.garden{
+  font-weight:900;
+  font-size:20vw;
+  line-height:.8;
+  
+ transform-origin: center top;
+  transform: scaleX(1.6) scaleY(1);
+   width: 100%;
+  text-align: center;
+}
+
+.row{
+  display:flex;
+  align-items:flex-start;
+  gap:2vw;
+}
+
+.of{
+  font-weight:900;
+  font-size:20vw;
+  line-height:.8;
+  margin-top: 2vh;
+
+  transform:scaleX(1.1) scaleY(1.85);
+  transform-origin:left top;
+}
+
+.right-block{
+  display:flex;
+  flex-direction:column;
+  
+}
+
+.forking{
+  font-weight:900;
+  font-size:18vw;
+  line-height:.8;
+  
+  display: inline-block;
+  transform-origin: left center;
+  transform: scaleX(1.25);
+  margin-top: 2.3vh;
+}
+
+.paths{
+  font-weight:900;
+  font-size:18vw;
+  line-height:.8;
+ 
+  display: inline-block;
+  transform-origin: left center;
+  transform: scaleX(1.7);
+  margin-top: 1vh;
+}
+
+.link{
+  color: var(--ghost);
+  text-decoration: none;
+  transition: color .25s ease;
+}
+.link:visited{
+  color: var(--ghost);
+}
+.link:hover{
+  color: var(--ink);
+}
+
+
+/* book of sand */
+
+.panel.book{
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-start;   
+  justify-content: flex-start; 
+  padding: 2vw;                
+}
+
+.bookTitle{
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--ghost);
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+}
+
+/*  BOOK OF */
+.bookTop{
+  display: block;
+  font-weight: 900;
+  font-size: 22vw;
+  line-height: 0.75;
+
+  transform-origin: left top;
+  transform: scaleX(1.3);  
+}
+
+/* SAND */
+.bookBottom{
+  display: block;
+  font-weight: 900;
+  font-size: 28vw;
+  line-height: 0.75;
+
+  margin-top: .07em;         
+  transform-origin: left top;
+  transform: scaleX(1.6);
+}
+
